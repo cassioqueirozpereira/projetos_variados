@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box_hover {
+    width: 400px;
+    height: 400px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* tudo que escapa a borda ficará invisível */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.box_blur {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/paisagem-full.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: filter, transform .4s;
+}
+
+.box_hover:hover .box_blur {
+    filter: blur(3px);
+    transform: scale(1.1);
+}
